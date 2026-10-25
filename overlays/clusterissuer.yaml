@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-tsungmn
+  annotations:
+    # CRD(cert-manager)가 아직 없어도 첫 sync가 실패하지 않게, 지워지지 않게 보호합니다.
+    argocd.argoproj.io/sync-options: Prune=false,SkipDryRunOnMissingResource=true
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: admin@tsungmn.com
+    privateKeySecretRef:
+      name: letsencrypt-tsungmn-account-key
+    solvers:
+      - dns01:
+          cloudflare:
+            apiTokenSecretRef:
+              name: cloudflare-api-token
+              key: api-token
