@@ -6,7 +6,6 @@ travel-planner, skku-notice 등 모든 서비스가 같은 발급기를 씁니�
 | 이름 | 용도 |
 | --- | --- |
 | `letsencrypt-tsungmn` | 실제 발급 (Let's Encrypt, DNS-01 / Cloudflare) |
-| `letsencrypt-tsungmn-staging` | 시험용. 발급 한도에 걸리지 않지만 브라우저가 신뢰하지 않음 |
 
 ## 처음 한 번만 (순서대로)
 
