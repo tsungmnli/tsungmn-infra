@@ -2,7 +2,7 @@
 # 홈서버 PostgreSQL 백업: DB마다 pg_dump + 역할(globals) 덤프 -> gzip, 오래된 파일 자동 삭제.
 # 사용: db/postgres/backup.sh        (어느 위치에서 실행해도 됩니다)
 # cron 예시 (매일 새벽 3시):
-#   0 3 * * * /home/<유저>/tsungmn-config/db/postgres/backup.sh >> /home/<유저>/tsungmn-config/db/postgres/backups/backup.log 2>&1
+#   0 3 * * * /home/<유저>/project/tsungmn-infra/db/postgres/backup.sh >> /home/<유저>/project/tsungmn-infra/db/postgres/backups/backup.log 2>&1
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
