@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/tsungmn/tsungmn-config.git
+    repoURL: https://github.com/tsungmnli/tsungmn-config.git
     targetRevision: main
     path: overlays
   destination:
